@@ -10,6 +10,7 @@ import { ManageTasksComponent } from './pages/manage-tasks/manage-tasks.componen
 import { TasksListComponent } from './containers/tasks-list/tasks-list.component';
 import { CountdownModule } from 'ngx-countdown';
 import { TimerComponent } from './components/timer/timer.component';
+import { ToUpperCaseDirective } from './directives/to-upper-case.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { TimerComponent } from './components/timer/timer.component';
     EditTaskDialogComponent,
     TasksListComponent,
     TimerComponent,
+    ToUpperCaseDirective,
   ],
   imports: [
     CommonModule,
