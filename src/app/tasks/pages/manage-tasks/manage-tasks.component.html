@@ -3,11 +3,15 @@
   <input id="search" matInput [(ngModel)]="taskFilter" />
 </mat-form-field>
 
-<button
-  mat-button
-  color="primary"
-  cdkFocusInitial
-  (click)="newTask()"
->
+<button mat-button color="primary" cdkFocusInitial (click)="newTask()">
   Create Task
 </button>
+
+<app-tasks-list
+  *ngIf="manageTaskService.taskList$ | async"
+  [taskList]="manageTaskService.taskList$ | async"
+  [totaltime]="manageTaskService.totalTime$ | async"
+  [taskFilter]="taskFilter"
+  (editTask)="onEditTask($event)"
+>
+</app-tasks-list>

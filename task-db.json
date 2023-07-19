@@ -2,8 +2,8 @@
   "tasks": [
     {
       "id": 0,
-      "name": "tarea 1",
-      "priority": "LOW",
+      "name": "tarea 12",
+      "priority": "HIGH",
       "timeSpent": 15,
       "isDone": false
     },
@@ -23,8 +23,8 @@
     },
     {
       "id": 4,
-      "name": "tarae 123",
-      "priority": "LOW",
+      "name": "tarae 1234",
+      "priority": "MEDIUM",
       "timeSpent": 0,
       "isDone": false
     }
