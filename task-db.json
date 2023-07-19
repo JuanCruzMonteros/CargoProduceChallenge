@@ -10,8 +10,15 @@
     {
       "id": 2,
       "name": "tarea 2",
-      "timeSpent": 106,
+      "timeSpent": 123,
       "priority": "MEDIUM",
+      "isDone": false
+    },
+    {
+      "id": 4,
+      "name": "tarae 1234",
+      "priority": "MEDIUM",
+      "timeSpent": 4,
       "isDone": false
     },
     {
@@ -20,13 +27,6 @@
       "timeSpent": 1799,
       "priority": "HIGH",
       "isDone": true
-    },
-    {
-      "id": 4,
-      "name": "tarae 1234",
-      "priority": "MEDIUM",
-      "timeSpent": 0,
-      "isDone": false
     }
   ]
 }
