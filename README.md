@@ -13,9 +13,13 @@ _What things do you need to install the software and how to install them_
 
 ```
     Download the repository.
+      > git clone https://github.com/JuanCruzMonteros/CargoProduceChallenge.git
     Run npm install to install dependencies.
-    Run npm run server to run JSON Server at http://localhost:3000.
+      > npm install
+    Run npm to run JSON Server at http://localhost:3000 
+      > npm run server
     Run ng serve to run the application at http://localhost:4200
+      > ng serve
 ```
 
 ## How to Modify Database
