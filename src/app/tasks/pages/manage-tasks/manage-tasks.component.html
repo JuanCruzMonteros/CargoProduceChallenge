@@ -1,17 +1,27 @@
-<mat-form-field>
-  <mat-label>Search</mat-label>
-  <input id="search" matInput [(ngModel)]="taskFilter" />
-</mat-form-field>
+<div class="manage-tasks">
+  <h1>{{ title }}</h1>
 
-<button mat-button color="primary" cdkFocusInitial (click)="newTask()">
-  Create Task
-</button>
+  <mat-form-field class="search">
+    <mat-label>Search task:</mat-label>
+    <input id="search" matInput [(ngModel)]="taskFilter" />
+  </mat-form-field>
 
-<app-tasks-list
-  *ngIf="manageTaskService.taskList$ | async"
-  [taskList]="manageTaskService.taskList$ | async"
-  [totaltime]="manageTaskService.totalTime$ | async"
-  [taskFilter]="taskFilter"
-  (editTask)="onEditTask($event)"
->
-</app-tasks-list>
+  <app-tasks-list
+    *ngIf="manageTaskService.taskList$ | async"
+    [taskList]="manageTaskService.taskList$ | async"
+    [totaltime]="manageTaskService.totalTime$ | async"
+    [taskFilter]="taskFilter"
+    (editTask)="onEditTask($event)"
+  >
+  </app-tasks-list>
+  <div style="margin-top: 20px">
+    <button
+      mat-stroked-button
+      color="primary"
+      cdkFocusInitial
+      (click)="newTask()"
+    >
+      Create new task
+    </button>
+  </div>
+</div>

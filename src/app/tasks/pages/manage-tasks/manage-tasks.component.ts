@@ -10,6 +10,8 @@ import { Task } from '../../interfaces/task.model';
   styleUrls: ['./manage-tasks.component.scss'],
 })
 export class ManageTasksComponent implements OnInit {
+  title = 'CargoProduceChallenge';
+
   taskFilter = '';
 
   constructor(
