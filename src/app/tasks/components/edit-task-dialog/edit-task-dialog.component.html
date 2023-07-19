@@ -1,0 +1,66 @@
+<div>
+  <h1 mat-dialog-title>{{ showFormTitle() }}</h1>
+  <div
+    mat-dialog-content
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 1rem auto;
+      max-width: 600px;
+      padding: 1rem;
+    "
+  >
+    <div>
+      <form [formGroup]="taskForm">
+        <div>
+          <mat-form-field>
+            <input
+              matInput
+              formControlName="name"
+              type="text"
+              placeholder="Input task to find"
+            />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-select formControlName="priority">
+              <mat-option
+                *ngFor="let p of PriorityEnum | keyvalue"
+                [value]="p.key"
+              >
+                {{ p.value }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <ng-container *ngIf="this.taskForm.get('id').value; else newTaskButton">
+      <button
+        mat-button
+        color="primary"
+        [mat-dialog-close]="taskForm"
+        cdkFocusInitial
+        (click)="saveTask()"
+      >
+        Confirm
+      </button>
+    </ng-container>
+    <ng-template #newTaskButton>
+      <button
+        mat-button
+        color="primary"
+        [mat-dialog-close]="taskForm"
+        cdkFocusInitial
+        (click)="saveTask()"
+      >
+        Create
+      </button>
+    </ng-template>
+    <button mat-button (click)="cancel()">Cancel</button>
+  </div>
+</div>
