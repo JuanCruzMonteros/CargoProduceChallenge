@@ -26,7 +26,10 @@
   <ng-container matColumnDef="Remaining time">
     <th mat-header-cell *matHeaderCellDef>Remaining time</th>
     <td mat-cell *matCellDef="let element">
-      add timer here
+      <app-timer
+        [timeSpent]="element.timeSpent"
+        (updateSpentTime)="getNewSpentTime($event, element)"
+      ></app-timer>
     </td>
   </ng-container>
 
