@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "id": 0,
+      "name": "tarea 1",
+      "priority": "LOW",
+      "timeSpent": 15,
+      "isDone": false
+    },
+    {
+      "id": 2,
+      "name": "tarea 2",
+      "timeSpent": 106,
+      "priority": "MEDIUM",
+      "isDone": false
+    },
+    {
+      "id": 3,
+      "name": "Directive 3",
+      "timeSpent": 1799,
+      "priority": "HIGH",
+      "isDone": true
+    }
+  ]
+}
