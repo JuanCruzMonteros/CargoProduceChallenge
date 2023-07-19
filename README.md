@@ -6,7 +6,7 @@
 
 _What things do you need to install the software and how to install them_
 
-- [Node js] - : https://nodejs.org/es/download/
+- [Node js] - https://nodejs.org/es/download/
 - [Angular CLI] - https://cli.angular.io/
 
 ## How to Run 🔧
