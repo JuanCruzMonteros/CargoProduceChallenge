@@ -1,8 +1,8 @@
-import { Component, OnInit, SimpleChanges, OnChanges } from '@angular/core';
-import { ManageTaskService } from '../../services/manage-task.service';
+import { Component } from '@angular/core';
+import { ManageTaskService } from '../../../services/manage-task.service';
 import { MatDialog } from '@angular/material/dialog';
-import { EditTaskDialogComponent } from '../../components/edit-task-dialog/edit-task-dialog.component';
-import { Task } from '../../interfaces/task.model';
+import { EditTaskDialogComponent } from '../../../components/edit-task-dialog/edit-task-dialog.component';
+import { Task } from '../../../interfaces/task.model';
 
 @Component({
   selector: 'app-manage-tasks',
