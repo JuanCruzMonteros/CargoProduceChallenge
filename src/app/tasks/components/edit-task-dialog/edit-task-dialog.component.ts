@@ -46,10 +46,10 @@ export class EditTaskDialogComponent {
   }
 
   showFormTitle() {
-    if (isNaN(this.taskForm.get('id').value)) {
-      return 'New Task:';
+    if (this.taskForm.get('id').value >= 0) {
+      return `Task: ${this.taskForm.get('id').value || ''}`;
     } else {
-      return `Task: ${this.taskForm.get('id').value}`;
+      return 'New Task:';
     }
   }
 }
